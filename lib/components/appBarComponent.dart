@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class appBarComponents extends StatefulWidget{
+class appBarComponent extends StatefulWidget{
   @override
 
-  appBarComponentsState createState() => appBarComponentsState();
+  appBarComponentState createState() => appBarComponentState();
 
 }
 
-class appBarComponentsState extends State<appBarComponents> {
+class appBarComponentState extends State<appBarComponent> {
   @override
   Widget build(BuildContext context) {
     return Row(

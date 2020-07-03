@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'components/appBarComponents.dart';
-import 'components/bottomNavigationBarComponents.dart';
+import 'components/appBarComponent.dart';
+import 'components/bottomNavigationBarComponent.dart';
 import 'screens/feedPage.dart';
+import 'components/footerComponent.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,14 +30,15 @@ class _MainPageState extends State<MainPage> {
         title: Row(
           children: <Widget>[
             Expanded(
-             child: appBarComponents(),
+             child: appBarComponent(),
             )
           ],
         ),
       ),
       body: feedPage(),
 
-      bottomNavigationBar: bottomNavigationBarComponents(),
+      bottomNavigationBar: bottomNavigationBarComponent(),
+
     );
   }
 }
