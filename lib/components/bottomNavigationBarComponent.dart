@@ -15,7 +15,8 @@ class bottomNavigationBarComponentState extends State<bottomNavigationBarCompone
         BottomNavigationBarItem(icon: Image.asset('assets/icons/icon_star.png'),title: Text("Label")),
         BottomNavigationBarItem(icon: Image.asset('assets/icons/icon_star.png'),title: Text("Label")),
 
-      ]
+      ],
+
     );
   }
 }

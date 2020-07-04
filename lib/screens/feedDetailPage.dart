@@ -10,34 +10,28 @@ class feedDetailPage extends StatefulWidget{
 }
 
 class feedDetailPageState extends State<feedDetailPage> {
-  List data;
+  var data;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: <Widget>[
-            appBarComponent()
-          ],
-        ),
-      ),
-      body: Center(
-        child: FutureBuilder(
-          future: DefaultAssetBundle.of(context).loadString('assets/data/appData.json'),
-          builder: (contex, snapshot){
-            data = jsonDecode(snapshot.data.toString());
-            return ListView.builder(itemBuilder: (BuildContext context, int index){
-              //if(snapshot = 'upperFeed'){}
-              return Card(
-                child: Column(
-                  children: <Widget>[
+      body: FutureBuilder(
+        future: DefaultAssetBundle.of(context).loadString("assets/data/appData.json"),
+        builder: (context,snapshot){
+          var myData = jsonDecode(snapshot.data.toString());
+          if(myData == null){
+            return Center(
+              child: Text("loading"),
+            );
+          }
+          else{
+            return Center(
+              child:
+              //Text(myData["user"]["name"]),
+              Text(myData["upperFeed"][0]["type"])
+            );
+          }
 
-                  ],
-                ),
-              );
-            });
-          },
-        ),
+        },
       ),
       bottomNavigationBar: footerComponent(),
     );

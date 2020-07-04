@@ -10,6 +10,7 @@ class feedPage extends StatefulWidget{
 }
 
 class feedPageState extends State<feedPage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

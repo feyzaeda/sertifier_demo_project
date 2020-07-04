@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sertifier_demo_project/screens/feedDetailPage.dart';
 import 'screens/feedPage.dart';
 
 void main() => runApp(MyApp());
@@ -22,6 +23,6 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return feedPage();
+    return feedDetailPage();
   }
 }
