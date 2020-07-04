@@ -52,6 +52,7 @@ flutter:
     - assets/icons/icon_search.png
     - assets/icons/icon_share.png
     - assets/icons/icon_star.png
+    - assets/data/appData.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
