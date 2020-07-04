@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 
 class footerComponent extends StatefulWidget{
@@ -12,28 +13,27 @@ class footerComponentState extends State<footerComponent> {
     return Row(
       children: <Widget>[
         Expanded(
-          child: IconButton(
-            icon: Image.asset('assets/icons/icon_back.png'),
+          //bu kisim degisecek
+          child: Row(
+            children: <Widget>[
+              Container(
+
+                child: IconButton(icon: Image.asset('assets/icons/icon_back.png')),
+              ),
+            ],
           ),
         ),
         Expanded(
-          child: IconButton(
-            icon: Image.asset('assets/icons/icon_share.png'),
-          ),
-        ),
-        Expanded(
-          child: IconButton(
-            icon: Image.asset('assets/icons/icon_checkmark.png'),
-          ),
-        ),
-        Expanded(
-          child: IconButton(
-            icon: Image.asset('assets/icons/icon_bookmark.png'),
-          ),
-        ),
-        Expanded(
-          child: IconButton(
-            icon: Image.asset('assets/icons/icon_more.png'),
+          child: Container(
+            //alignment: Alignment.bottomRight,
+            child: Row(
+              children: <Widget>[
+                IconButton(icon: Image.asset('assets/icons/icon_share.png'),),
+                IconButton(icon: Image.asset('assets/icons/icon_checkmark.png'),),
+                IconButton(icon: Image.asset('assets/icons/icon_bookmark.png'),),
+                IconButton(icon: Image.asset('assets/icons/icon_more.png'),),
+              ],
+            ),
           ),
         )
       ],

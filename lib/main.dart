@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(primaryColor: Colors.white),
       home: MainPage(),
     );
   }
@@ -26,18 +27,17 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.pink,
         title: Row(
           children: <Widget>[
             Expanded(
-             child: appBarComponent(),
+              child: appBarComponent(),
             )
           ],
         ),
       ),
       body: feedPage(),
 
-      bottomNavigationBar: bottomNavigationBarComponent(),
+      bottomNavigationBar: footerComponent(),
 
     );
   }
