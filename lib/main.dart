@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'components/appBarComponent.dart';
-import 'components/bottomNavigationBarComponent.dart';
 import 'screens/feedPage.dart';
-import 'components/footerComponent.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,20 +22,6 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: <Widget>[
-            Expanded(
-              child: appBarComponent(),
-            )
-          ],
-        ),
-      ),
-      body: feedPage(),
-
-      bottomNavigationBar: bottomNavigationBarComponent(),
-
-    );
+    return feedPage();
   }
 }
