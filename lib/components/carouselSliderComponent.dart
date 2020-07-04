@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -9,6 +11,7 @@ class carouselSliderComponent extends StatefulWidget{
 
 class carouselSliderComponentState extends State<carouselSliderComponent> {
   List<String> exampleList = ['deneme1', 'deneme2', 'deneme3', 'deneme4','deneme5'];
+  var data;
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
@@ -20,9 +23,28 @@ class carouselSliderComponentState extends State<carouselSliderComponent> {
                 width: MediaQuery.of(context).size.width,
                 margin: EdgeInsets.symmetric(horizontal: 5.0),
                 decoration: BoxDecoration(
-                    color: Colors.amber
+                    color: Colors.pink
                 ),
-                child: Text('text $i', style: TextStyle(fontSize: 16.0),)
+                child: Center(
+                  child: FutureBuilder(
+                    future: DefaultAssetBundle.of(context).loadString("assets/data/appData.json"),
+                    builder: (context,snapshot){
+                      var myData = jsonDecode(snapshot.data.toString());
+                      if(myData == null){
+                        return Center(
+                          child: Text("loading"),
+                        );
+                      }
+                      else{
+                        return Center(
+                            child:
+                            //Text(myData["user"]["name"]),
+                            Text(myData["upperFeed"][0]["type"])
+                        );
+                      }
+                    },
+                  ),
+                )
             );
           },
         );

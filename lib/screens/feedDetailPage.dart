@@ -18,6 +18,7 @@ class feedDetailPageState extends State<feedDetailPage> {
         future: DefaultAssetBundle.of(context).loadString("assets/data/appData.json"),
         builder: (context,snapshot){
           var myData = jsonDecode(snapshot.data.toString());
+
           if(myData == null){
             return Center(
               child: Text("loading"),
