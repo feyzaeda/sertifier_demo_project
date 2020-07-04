@@ -37,7 +37,7 @@ class _MainPageState extends State<MainPage> {
       ),
       body: feedPage(),
 
-      bottomNavigationBar: footerComponent(),
+      bottomNavigationBar: bottomNavigationBarComponent(),
 
     );
   }
