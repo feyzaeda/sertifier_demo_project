@@ -44,7 +44,7 @@ class feedPageState extends State<feedPage> {
           )
         ],
       ),
-      bottomNavigationBar: bottomNavigationBarComponent(),
+
 
     );
   }
