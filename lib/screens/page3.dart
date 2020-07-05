@@ -1,11 +1,11 @@
+//feed ile ayni appBar ve footera sahip bos sayfa
+
 import 'package:flutter/material.dart';
 import 'package:sertifier_demo_project/components/appBarComponent.dart';
-import 'package:sertifier_demo_project/components/bottomNavigationBarComponent.dart';
 
-class page3 extends StatefulWidget{
+class page3 extends StatefulWidget {
   @override
   page3State createState() => page3State();
-
 }
 
 class page3State extends State<page3> {
@@ -21,7 +21,6 @@ class page3State extends State<page3> {
           ],
         ),
       ),
-
     );
   }
 }

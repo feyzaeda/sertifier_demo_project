@@ -1,12 +1,15 @@
+//upeerFeed slider da kullanilacak footer
+
 import 'package:flutter/material.dart';
 
-class carouselSliderComponentFooter extends StatefulWidget{
+class carouselSliderComponentFooter extends StatefulWidget {
   @override
-  carouselSliderComponentFooterState createState() => carouselSliderComponentFooterState();
-
+  carouselSliderComponentFooterState createState() =>
+      carouselSliderComponentFooterState();
 }
 
-class carouselSliderComponentFooterState extends State<carouselSliderComponentFooter> {
+class carouselSliderComponentFooterState
+    extends State<carouselSliderComponentFooter> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -15,7 +18,11 @@ class carouselSliderComponentFooterState extends State<carouselSliderComponentFo
           child: Container(
             child: Row(
               children: <Widget>[
-                Expanded(child: IconButton(icon: Image.asset('assets/icons/icon_bookmark.png'), color: Theme.of(context).iconTheme.color, onPressed: null)),
+                Expanded(
+                    child: IconButton(
+                        icon: Image.asset('assets/icons/icon_bookmark.png'),
+                        color: Theme.of(context).iconTheme.color,
+                        onPressed: null)),
                 Expanded(child: Text("Bookmark"))
               ],
             ),
@@ -25,7 +32,11 @@ class carouselSliderComponentFooterState extends State<carouselSliderComponentFo
           child: Container(
             child: Row(
               children: <Widget>[
-                Expanded(child: IconButton(icon: Image.asset('assets/icons/icon_checkmark.png'),color: Theme.of(context).iconTheme.color, onPressed: null)),
+                Expanded(
+                    child: IconButton(
+                        icon: Image.asset('assets/icons/icon_checkmark.png'),
+                        color: Theme.of(context).iconTheme.color,
+                        onPressed: null)),
                 Expanded(child: Text("Mark as read"))
               ],
             ),
@@ -35,10 +46,13 @@ class carouselSliderComponentFooterState extends State<carouselSliderComponentFo
           child: Container(
             child: Row(
               children: <Widget>[
-                Expanded(child: IconButton(icon: Image.asset('assets/icons/icon_share.png'),color: Theme.of(context).iconTheme.color, onPressed: null)),
+                Expanded(
+                    child: IconButton(
+                        icon: Image.asset('assets/icons/icon_share.png'),
+                        color: Theme.of(context).iconTheme.color,
+                        onPressed: null)),
                 Expanded(child: Text("Share"))
               ],
-
             ),
           ),
         ),

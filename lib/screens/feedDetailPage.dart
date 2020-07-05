@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:sertifier_demo_project/components/footerComponent.dart';
 
@@ -20,18 +20,20 @@ class feedDetailPageState extends State<feedDetailPage> {
 
           return ListView(
             children: <Widget>[
+              ListTile(title: Image.network(myData["upperFeed"][1]["imgUrl"])),
               ListTile(
-                title: Image.network(myData["upperFeed"][1]["imgUrl"])
-              ),
-              ListTile(
-                title: Text(myData["upperFeed"][1]["text"],),
+                title: Text(
+                  myData["upperFeed"][1]["text"],
+                ),
               )
             ],
           );
-
+          //scroll ozelligi kazandirmak icin gerekli komponentleri list icine attim
+          //videodaki img kullandim
         },
       ),
       bottomNavigationBar: footerComponent(),
+      //feedDetailPage icin olusturdugum footer
     );
   }
 }

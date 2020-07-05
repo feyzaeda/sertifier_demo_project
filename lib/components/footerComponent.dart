@@ -1,11 +1,11 @@
-import 'package:carousel_slider/carousel_controller.dart';
+//feedDetailPage de kullanilacak footer
+
 import 'package:flutter/material.dart';
 import 'package:sertifier_demo_project/screens/feedPage.dart';
 
-class footerComponent extends StatefulWidget{
+class footerComponent extends StatefulWidget {
   @override
   footerComponentState createState() => footerComponentState();
-
 }
 
 class footerComponentState extends State<footerComponent> {
@@ -18,11 +18,14 @@ class footerComponentState extends State<footerComponent> {
           child: Row(
             children: <Widget>[
               Container(
-                child: IconButton(icon: Image.asset('assets/icons/icon_back.png',color: Theme.of(context).iconTheme.color),
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> feedPage()));
-                  },),
-
+                child: IconButton(
+                  icon: Image.asset('assets/icons/icon_back.png',
+                      color: Theme.of(context).iconTheme.color),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => feedPage()));
+                  },
+                ),
               ),
             ],
           ),
@@ -32,10 +35,22 @@ class footerComponentState extends State<footerComponent> {
             //alignment: Alignment.bottomRight,
             child: Row(
               children: <Widget>[
-                IconButton(icon: Image.asset('assets/icons/icon_share.png',color: Theme.of(context).iconTheme.color),),
-                IconButton(icon: Image.asset('assets/icons/icon_checkmark.png',color: Theme.of(context).iconTheme.color),),
-                IconButton(icon: Image.asset('assets/icons/icon_bookmark.png',color: Theme.of(context).iconTheme.color),),
-                IconButton(icon: Image.asset('assets/icons/icon_more.png',color: Theme.of(context).iconTheme.color),),
+                IconButton(
+                  icon: Image.asset('assets/icons/icon_share.png',
+                      color: Theme.of(context).iconTheme.color),
+                ),
+                IconButton(
+                  icon: Image.asset('assets/icons/icon_checkmark.png',
+                      color: Theme.of(context).iconTheme.color),
+                ),
+                IconButton(
+                  icon: Image.asset('assets/icons/icon_bookmark.png',
+                      color: Theme.of(context).iconTheme.color),
+                ),
+                IconButton(
+                  icon: Image.asset('assets/icons/icon_more.png',
+                      color: Theme.of(context).iconTheme.color),
+                ),
               ],
             ),
           ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sertifier_demo_project/components/appBarComponent.dart';
-import 'package:sertifier_demo_project/components/bottomNavigationBarComponent.dart';
 import 'package:sertifier_demo_project/components/carouselSliderComponent.dart';
 import 'package:sertifier_demo_project/components/carouselSliderMyListComponenet.dart';
 
@@ -44,7 +43,7 @@ class feedPageState extends State<feedPage> {
           )
         ],
       ),
-
+      //scroll ozelligi kazandirmak icin gerekli komponentleri list icine attim
 
     );
   }

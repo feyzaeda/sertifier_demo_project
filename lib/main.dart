@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sertifier_demo_project/components/bottomNavigationBarComponent.dart';
-import 'package:sertifier_demo_project/screens/feedDetailPage.dart';
-import 'screens/feedPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,5 +23,6 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return bottomNavigationBarComponent();
+    //sayfa gecislerini bottomNavigationBarComponent() yaptigi icin bottomNavigatinonBar donduruyor
   }
 }
