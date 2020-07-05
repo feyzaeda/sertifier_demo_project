@@ -21,7 +21,7 @@ class page3State extends State<page3> {
           ],
         ),
       ),
-      bottomNavigationBar: bottomNavigationBarComponent(),
+
     );
   }
 }

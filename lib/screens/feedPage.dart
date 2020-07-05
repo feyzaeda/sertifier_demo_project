@@ -19,17 +19,23 @@ class feedPageState extends State<feedPage> {
           children: <Widget>[
             Expanded(
               child: appBarComponent(),
-            )
+            ),
           ],
-        ),
+        )
       ),
       body: Column(
         children: <Widget>[
+          Row(
+            children: <Widget>[
+              Text("What are you learning today Ege?"),
+            ],
+          ),
           Expanded(child: carouselSliderComponent()),
           Expanded(child: carouselSliderComponent())
         ],
       ),
       bottomNavigationBar: bottomNavigationBarComponent(),
+
     );
   }
 }

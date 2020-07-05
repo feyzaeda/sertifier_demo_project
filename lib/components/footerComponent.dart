@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:sertifier_demo_project/screens/feedPage.dart';
 
 class footerComponent extends StatefulWidget{
   @override
@@ -17,8 +18,11 @@ class footerComponentState extends State<footerComponent> {
           child: Row(
             children: <Widget>[
               Container(
+                child: IconButton(icon: Image.asset('assets/icons/icon_back.png'),
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> feedPage()));
+                  },),
 
-                child: IconButton(icon: Image.asset('assets/icons/icon_back.png')),
               ),
             ],
           ),

@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:sertifier_demo_project/components/carouselSliderComponentFooter.dart';
 import 'package:sertifier_demo_project/screens/feedDetailPage.dart';
 
 class carouselSliderComponent extends StatefulWidget {
@@ -41,17 +42,28 @@ class carouselSliderComponentState extends State<carouselSliderComponent> {
                             children: <Widget>[
                               Expanded(
                                 child: Container(
+                                  width: 250,
+                                  height: 250,
+                                  alignment: Alignment.topRight,
+                                  child: Text(myData["upperFeed"][(i-1)]["type"]),
                                   decoration: new BoxDecoration(
                                     image: new DecorationImage(
                                       image: new NetworkImage(
                                           myData["upperFeed"][(i - 1)]["imgUrl"]),
                                       fit: BoxFit.cover,
-                                    ),
-                                  ),
 
-                                  //child: Image.network(myData["upperFeed"][(i-1)]["imgUrl"]),
+                                    ),
+
+                                  ),
                                 ),
                               ),
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          child: Row(
+                            children: <Widget>[
+                              Text(myData["upperFeed"][(i-1)]["link"])
                             ],
                           ),
                         ),
@@ -68,6 +80,21 @@ class carouselSliderComponentState extends State<carouselSliderComponent> {
                             ],
                           ),
                         ),
+                        /*Expanded(
+                          child: Row(
+                            children: <Widget>[
+                              Text(myData["upperFeed"][(i-1)]["readTimeMinutes"])
+
+                            ],
+                          ),
+                        ),*/
+
+                        // int i stringe dönüştümek gerek
+
+                        Expanded(
+                          child: carouselSliderComponentFooter()
+                        )
+
                       ],
                     );
                   },

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sertifier_demo_project/components/bottomNavigationBarComponent.dart';
 import 'package:sertifier_demo_project/screens/feedDetailPage.dart';
 import 'screens/feedPage.dart';
 
