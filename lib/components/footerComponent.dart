@@ -18,7 +18,7 @@ class footerComponentState extends State<footerComponent> {
           child: Row(
             children: <Widget>[
               Container(
-                child: IconButton(icon: Image.asset('assets/icons/icon_back.png'),
+                child: IconButton(icon: Image.asset('assets/icons/icon_back.png',color: Theme.of(context).iconTheme.color),
                   onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=> feedPage()));
                   },),
@@ -32,10 +32,10 @@ class footerComponentState extends State<footerComponent> {
             //alignment: Alignment.bottomRight,
             child: Row(
               children: <Widget>[
-                IconButton(icon: Image.asset('assets/icons/icon_share.png'),),
-                IconButton(icon: Image.asset('assets/icons/icon_checkmark.png'),),
-                IconButton(icon: Image.asset('assets/icons/icon_bookmark.png'),),
-                IconButton(icon: Image.asset('assets/icons/icon_more.png'),),
+                IconButton(icon: Image.asset('assets/icons/icon_share.png',color: Theme.of(context).iconTheme.color),),
+                IconButton(icon: Image.asset('assets/icons/icon_checkmark.png',color: Theme.of(context).iconTheme.color),),
+                IconButton(icon: Image.asset('assets/icons/icon_bookmark.png',color: Theme.of(context).iconTheme.color),),
+                IconButton(icon: Image.asset('assets/icons/icon_more.png',color: Theme.of(context).iconTheme.color),),
               ],
             ),
           ),

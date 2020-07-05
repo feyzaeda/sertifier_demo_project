@@ -31,7 +31,7 @@ class appBarComponentState extends State<appBarComponent> {
         ),
 
 
-      actions: <Widget>[IconButton(icon: Image.asset('assets/icons/icon_search.png'), onPressed: null)],
+      actions: <Widget>[IconButton(icon: Image.asset('assets/icons/icon_search.png'),color: Theme.of(context).iconTheme.color, onPressed: null)],
       );
 
   }

@@ -2,30 +2,31 @@ import 'dart:convert';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:sertifier_demo_project/components/carouselSliderComponentFooter.dart';
+import 'package:sertifier_demo_project/components/carouselSliderComponentFooterMyList.dart';
 import 'package:sertifier_demo_project/screens/feedDetailPage.dart';
 
-class carouselSliderComponent extends StatefulWidget {
+import 'carouselSliderComponentFooter.dart';
+
+class carouselSliderMyListComponent extends StatefulWidget{
   @override
-  carouselSliderComponentState createState() => carouselSliderComponentState();
+  carouselSliderMyListComponentState createState() => carouselSliderMyListComponentState();
 }
 
-class carouselSliderComponentState extends State<carouselSliderComponent> {
-  List<int> exampleList = [0, 1, 2, 3, 4];
-  var data;
-
+class carouselSliderMyListComponentState extends State<carouselSliderMyListComponent> {
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(height: 400.0),
-      items: [1, 2, 3, 4, 5].map((i) {
+      items: [1, 2, 3, ].map((i) {
         return Builder(
           builder: (BuildContext context) {
             return Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
               margin: EdgeInsets.symmetric(horizontal: 10.0),
-              decoration: BoxDecoration(),
+              decoration: BoxDecoration(
+
+              ),
               child: GestureDetector(
                 child: FutureBuilder(
                   future: DefaultAssetBundle.of(context)
@@ -34,67 +35,69 @@ class carouselSliderComponentState extends State<carouselSliderComponent> {
                     var myData = jsonDecode(snapshot.data.toString());
 
                     return Column(
+
                       children: <Widget>[
+
                         Expanded(
                           child: Container(
                             width: MediaQuery.of(context).size.width,
-                            height: MediaQuery.of(context).size.height,
+                            height: 400,
                             alignment: Alignment.topRight,
-                            child: Text(myData["upperFeed"][(i - 1)]["type"]),
+                            child: Text(myData["myList"][(i-1)]["type"]),
                             decoration: new BoxDecoration(
                               image: new DecorationImage(
                                 image: new NetworkImage(
-                                    myData["upperFeed"][(i - 1)]["imgUrl"]),
+                                    myData["myList"][(i - 1)]["imgUrl"]),
                                 fit: BoxFit.cover,
+
                               ),
+
                             ),
                           ),
                         ),
+
+
                         Expanded(
                           child: Row(
                             children: <Widget>[
-                              Text(
-                                myData["upperFeed"][(i - 1)]["link"],
-                                style: Theme.of(context).textTheme.subtitle,
-                              )
+                              Text(myData["myList"][(i-1)]["link"],style: Theme.of(context).textTheme.subtitle,)
                             ],
                           ),
                         ),
                         Expanded(
                           child: Row(
+
                             children: <Widget>[
+
                               Expanded(
-                                  child: Text(
-                                myData["upperFeed"][(i - 1)]["title"],
-                                style: Theme.of(context).textTheme.title,
-                              ))
+
+                                  child:
+
+                                  Text(myData["myList"][(i - 1)]["title"],style: Theme.of(context).textTheme.title,))
                             ],
                           ),
                         ),
                         Expanded(
-                          child: Row(
-                            children: <Widget>[
-                              Text(
-                                myData["upperFeed"][(i - 1)]["readTimeMinutes"],
-                                style: Theme.of(context).textTheme.caption,
-                              )
-                            ],
-                          ),
+                          child: Text("Text"),
                         ),
+
+                        // readTimeMinutes changed int to string
+
                         Expanded(
-                          child: Text("Text"), //i dont know how divide text :(
-                        ),
-                        Expanded(child: carouselSliderComponentFooter())
+                            child: carouselSliderComponentFooterMyList()
+                        )
+
                       ],
                     );
                   },
                 ),
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => feedDetailPage()));
+
+                onTap: (){
+                  debugPrint("$i");
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context) => feedDetailPage()));
                 },
+
               ),
             );
           },

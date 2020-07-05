@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sertifier_demo_project/components/appBarComponent.dart';
 import 'package:sertifier_demo_project/components/bottomNavigationBarComponent.dart';
 import 'package:sertifier_demo_project/components/carouselSliderComponent.dart';
+import 'package:sertifier_demo_project/components/carouselSliderMyListComponenet.dart';
 
 class feedPage extends StatefulWidget{
   @override
@@ -23,15 +24,24 @@ class feedPageState extends State<feedPage> {
           ],
         )
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              Text("What are you learning today Ege?"),
-            ],
+          ListTile(
+            title: Text("What are you learning today Ege?"),
           ),
-          Expanded(child: carouselSliderComponent()),
-          Expanded(child: carouselSliderComponent())
+          ListTile(
+            title: carouselSliderComponent(),
+          ),
+          ListTile(
+            title: Row(
+              children: <Widget>[
+                Expanded(child: Container(child: Text("MyList"))),
+                Expanded(child: Container(child: Icon(Icons.arrow_forward_ios),alignment: Alignment.bottomRight,),)
+              ],
+            ),
+          ),ListTile(
+            title: carouselSliderMyListComponent(),
+          )
         ],
       ),
       bottomNavigationBar: bottomNavigationBarComponent(),
