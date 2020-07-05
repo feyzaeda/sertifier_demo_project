@@ -13,7 +13,9 @@ class carouselSliderMyListComponent extends StatefulWidget {
 }
 
 class carouselSliderMyListComponentState extends State<carouselSliderMyListComponent> {
+  int data;
   @override
+
   Widget build(BuildContext context) {
      return CarouselSlider(
       options: CarouselOptions(height: 400.0),
@@ -119,6 +121,9 @@ class carouselSliderMyListComponentState extends State<carouselSliderMyListCompo
                         ),
 
                         onTap: (){
+                          if((i-1)==0){
+                            data=0;
+                          }
                           debugPrint("$i");
                           Navigator.push(context, MaterialPageRoute(
                               builder: (context) => feedDetailPage()));

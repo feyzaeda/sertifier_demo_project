@@ -12,7 +12,7 @@ class carouselSliderComponent extends StatefulWidget {
 
 class carouselSliderComponentState extends State<carouselSliderComponent> {
   List<int> exampleList = [0, 1, 2, 3, 4];
-  var data;
+
 
   @override
   Widget build(BuildContext context) {
