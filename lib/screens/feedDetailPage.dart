@@ -38,7 +38,7 @@ class feedDetailPageState extends State<feedDetailPage> {
               backgroundColor: Colors.cyanAccent,
               valueColor: new AlwaysStoppedAnimation<Color>(Colors.red),
               value: _progress,
-              
+
             ),
 
           );
